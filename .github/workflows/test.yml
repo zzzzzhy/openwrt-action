@@ -12,7 +12,8 @@ jobs:
       fail-fast: false
       matrix:
         arch:
-          - ipq_ipq40xx-qsdk11
+          - mvebu-1907
+          - ar71xx-1806
 
     steps:
       - uses: actions/checkout@v3
