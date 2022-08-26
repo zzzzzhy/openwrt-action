@@ -12,8 +12,7 @@ jobs:
       fail-fast: false
       matrix:
         arch:
-          - mvebu-1907
-          - ar71xx-1806
+          - ipq40xx-generic-19.07.7
 
     steps:
       - uses: actions/checkout@v3
@@ -22,7 +21,7 @@ jobs:
         uses: innet8/gh-action-sdk@master
         env:
           ARCH: ${{ matrix.arch }}
-          MODE: glinet
+          MODE: open
           DEPENDENCES: libev libopenssl libmbedtls zlib
           ADDR: ${{ env.REPO_URL }}
           BRANCH: ${{ env.REPO_BRANCH }}
